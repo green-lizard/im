@@ -46,7 +46,7 @@
           alert('使用临时用户名' + username)
         }
 
-        var socket = io('http://localhost:3000')
+        var socket = io()
         socket.emit('online', {
           'username': username
         })
