@@ -18,7 +18,7 @@ io.on('connection', (socket) => {
 	socket.on('online', ({username}) => {
 		let onlinArray = Object.values(onlines)
 		if (onlinArray.length) {
-			socket.emit('room state', `${onlinArray.join(',å')} 正在当前聊天室中`)
+			socket.emit('room state', `${onlinArray.join(',')} 正在当前聊天室中`)
 		}
 
 		onlines[socket.id] = username
