@@ -46,7 +46,8 @@
           alert('使用临时用户名' + username)
         }
 
-        var socket = io()
+        var socket = io() // 默认localhost
+
         socket.emit('online', {
           'username': username
         })
